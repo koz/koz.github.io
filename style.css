@@ -1,9 +1,13 @@
-html {
-  height: 100%;
+.lato {
+  font-family: "Lato", "Helvetica Neue", "Calibri Light", Roboto, sans-serif;
 }
 
-body {
-  font-family: "Lato", sans-serif;
+.open-sans {
+  font-family: "Open Sans", "Helvetica Neue", "Calibri Light", Roboto, sans-serif;
+}
+
+@media (min-width: 768px) {
+  .bg-image-ns {
   height: 100%;
   width: 100%;
   margin: 0;
@@ -12,49 +16,5 @@ body {
   background-attachment: fixed;
   background-size: cover;
   background-position: center center;
-}
-
-h1 {
-  font-family: "Open sans", sans-serif;
-  font-weight: bold;
-  font-size: 20px;
-  margin-bottom: 40px;
-}
-
-a, a:visited, a:active, a:focus {
-  font-weight: bold;
-  text-decoration: none;
-  color: #000000;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-span {
-  font-size: 36px;
-  display: block;
-  margin-bottom: 10%;
-  text-align: left;
-}
-
-span:last-child {
-  margin-bottom: 0;
-}
-
-.text-box {
-  background-color: white;
-  padding-left: 40px;
-  padding-bottom: 40px;
-  position: absolute;
-  min-height: 100%;
-  width: 100%;
-  padding-right: 40px;
-}
-
-@media (min-width: 768px) {
-  .text-box {
-    width: 50%;
-    padding-right: 20px;
   }
 }
