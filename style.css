@@ -5,16 +5,3 @@
 .open-sans {
   font-family: "Open Sans", "Helvetica Neue", "Calibri Light", Roboto, sans-serif;
 }
-
-@media (min-width: 768px) {
-  .bg-image-ns {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  background-image: url(./bg-img-min.jpg);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center center;
-  }
-}
