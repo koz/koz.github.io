@@ -2,9 +2,11 @@ const WCLink = document.getElementById('WCLink')
 const WCImage = document.getElementById('WCImage')
 
 WCLink.addEventListener('mouseenter', () => {
-  WCImage.classList.replace('dn-ns', 'db-ns')
+  WCImage.style.transform = 'scale(1)'
+  WCImage.style.opacity = 1
 })
 
 WCLink.addEventListener('mouseleave', () => {
-  WCImage.classList.replace('db-ns', 'dn-ns')
+  WCImage.style.transform = 'scale(0)'
+  WCImage.style.opacity = 0
 })
