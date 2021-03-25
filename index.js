@@ -1,5 +1,3 @@
-const WCLink = document.getElementById('WCLink')
-const WCImage = document.getElementById('WCImage')
 
 const getRandomInt = (max, min = 0) => {
   const minInt = Math.ceil(min);
@@ -7,14 +5,25 @@ const getRandomInt = (max, min = 0) => {
   return Math.floor(Math.random() * (maxInt - minInt)) + minInt;
 }
 
-WCLink.addEventListener('mouseenter', () => {
-  WCImage.style.right = `${getRandomInt(40, 20)}%`
-  WCImage.style.top = `${getRandomInt(50, 10)}%`
-  WCImage.style.transform = 'scale(1)'
-  WCImage.style.opacity = 1
-})
+const links = [{link: 'WCLink', image: 'WCImage'}, {link: 'BLink', image: 'BImage'}]
 
-WCLink.addEventListener('mouseleave', () => {
-  WCImage.style.transform = 'scale(0)'
-  WCImage.style.opacity = 0
+links.forEach((l) => {
+  const linkEl = document.getElementById(l.link)
+  const imageEl = document.getElementById(l.image)
+
+  if (!linkEl || !imageEl) {
+    return;
+  }
+
+  linkEl.addEventListener('mouseenter', () => {
+    imageEl.style.right = `${getRandomInt(40, 20)}%`
+    imageEl.style.top = `${getRandomInt(50, 10)}%`
+    imageEl.style.transform = 'scale(1)'
+    imageEl.style.opacity = 1
+  })
+
+  linkEl.addEventListener('mouseleave', () => {
+    imageEl.style.transform = 'scale(0)'
+    imageEl.style.opacity = 0
+  })
 })
